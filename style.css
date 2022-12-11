@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+:root{
+    --grey: rgb(86, 86, 86);
+}
+.center-g{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body {
+    height: 100vh;
+}
+button, input {
+    border: none;
+    outline: none;
+}
+/* ---------------------------------------------------------- */
+.app-container {
+    width: 900px;
+    height: 60%;
+    border-radius: 10px;
+    display: flex;
+}
+.app-container .input-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    backdrop-filter: blur(2px);
+    z-index: 99;
+    opacity: 0;
+    display: none;
+    transition: .3s;
+}
+
+.app-container .input-container .input-card {
+    flex-direction: column;
+    width: 500px;
+    height: 200px;
+    background-color: var(--grey);
+    border-radius: 10px;
+    margin-bottom: 30vh;
+}
+.app-container .input-container .input-card button,
+.app-container .input-container .input-card input {
+    width: 70%;
+    height: 35px;
+    font-size: 1.15em;
+    color: #FFF;
+    background-color: #3f3f3f;
+    transition: .5s;
+    cursor:pointer;
+}
+.app-container .input-container .input-card input {
+    border-radius: 3px;
+    padding-inline: 0.65rem;
+    margin-bottom: 1rem;
+}
+.app-container .input-container .input-card input:focus {
+    background-color: transparent;
+    border: 1px solid #3f3f3f;
+} 
+.app-container .input-container .input-card button:hover {
+    filter: brightness(1.1);
+}
+.app-container .input-container .input-card button:active {
+    scale: .96;
+}
+
+
+.app-container .column {
+    width: calc(100% / 3);
+    outline: 1px solid #373737;
+}
+.app-container .column .todos-container .show-btn {
+    width: 100%;
+    padding-block: .45rem;
+    background-color: #9c552b;
+    border-radius: 5px;
+    color: #fff;
+    transition: .5s;
+    font-size: 1.05em;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.app-container .column .todos-container .show-btn:hover {
+    filter: brightness(1.1);
+}
+.app-container .column .todos-container .show-btn:clicked {
+    transform: scale(.9);
+}
+.app-container .column .head {
+    width: 100%;
+    height: 60px;
+    background-color: var(--grey);
+    color: #fff;
+    font-size: 1.35em;
+    letter-spacing: 2px;
+}
+.app-container .column .todos-container {
+    width: 100%;
+    height: calc(100% - 60px);
+    background-color: #eeeeee;
+    padding: .45rem;
+    transition: .5s;
+}
+.app-container .column .todos-container .todo {
+    padding: .45rem .70rem;
+    color: rgb(34, 34, 34);
+    background-color: #fff;
+    width: 100%;
+    margin-block: 0.45rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 7px #23232314;
+    cursor: pointer;
+}
+.app-container .done-clm .todos-container .todo {
+    background-color: rgb(42, 191, 87);
+}
+.app-container .inProgress-clm .todos-container .todo {
+    background-color: #eda428;
+}

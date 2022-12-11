@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Drag_Drop App</title>
+</head>
+<body class="center-g">
+    <div class="app-container">
+
+        <div class="input-container center-g">
+            <div class="input-card center-g">
+                <input type="text" placeholder="do this...">
+                <button class="add-btn">Add</button>
+            </div>
+        </div>
+
+        <div class="column todo-clm">
+            <div class="head center-g"><p>Todo</p></div>
+            <div class="todos-container" type-task="todo">
+                <button class="show-btn">Add Todo +</button>
+                
+            </div>
+        </div>
+        <div class="column inProgress-clm">
+            <div class="head center-g"><p>InProgress</p></div>
+            <div class="todos-container" type-task="inProgress">
+
+            </div>
+        </div>
+        <div class="column done-clm">
+            <div class="head center-g"><p>Done</p></div>
+            <div class="todos-container" type-task="done">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
